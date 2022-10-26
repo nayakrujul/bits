@@ -1,5 +1,5 @@
 from string import ascii_lowercase, ascii_uppercase
-from List import List
+from bits.List import List
 
 def run(code, stack=()):
     if code.count('0') + code.count('1') != len(code):
