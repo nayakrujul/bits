@@ -121,7 +121,7 @@ def run(code, stack=()):
                     if isinstance(item, str):
                         for i in item:
                             stack = run(code[index+4:code.index('11100011')], [i] + stack)
-                    break
+                        break
                 index = code.index('11100011') + 4
             elif num == 4:
                 while True:
