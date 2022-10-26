@@ -1,0 +1,3 @@
+[console_scripts]
+bits = bits.main:from_cmdline
+

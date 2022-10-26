@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+bits_lang.egg-info/PKG-INFO
+bits_lang.egg-info/SOURCES.txt
+bits_lang.egg-info/dependency_links.txt
+bits_lang.egg-info/entry_points.txt
+bits_lang.egg-info/top_level.txt
