@@ -4,7 +4,7 @@ long_description = 'A very annoying language - read the docs at https://www.gith
 
 setup(
   name = 'bits-lang',
-  version = '1.1',
+  version = '1.2',
   license='Apache',
   description = 'A very annoying language',
   author = 'Rujul Nayak',
