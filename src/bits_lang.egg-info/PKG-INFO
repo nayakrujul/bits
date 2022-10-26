@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: bits-lang
-Version: 1.5
+Version: 1.6
 Summary: A very annoying language
 Home-page: https://github.com/nayakrujul/bits
 Author: Rujul Nayak
 Author-email: rujulnayak@outlook.com
 License: Apache
-Download-URL: https://github.com/nayakrujul/bits/archive/refs/tags/v10.tar.gz
+Download-URL: https://github.com/nayakrujul/bits/archive/refs/tags/v16.tar.gz
 Keywords: golfing,code-golf,language
 Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
