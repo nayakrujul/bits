@@ -24,7 +24,6 @@ def run(code, stack=()):
                 stack[0] += char
             else:
                 stack.push(char)
-            print('DEBUG|0')
             index += 5
         elif count == 1:
             binary = code[index:index+5]
@@ -37,7 +36,6 @@ def run(code, stack=()):
                 stack[0] += char
             else:
                 stack.push(char)
-            print('DEBUG|1')
             index += 5
         elif count == 2:
             binary = code[index:index+4]
@@ -107,7 +105,6 @@ def run(code, stack=()):
                         num1 = item2
                         break
                 stack.push(num1 ** num2)
-            print('DEBUG|2')
             index += 4
         elif count == 3:
             binary = code[index:index+4]
@@ -152,7 +149,6 @@ def run(code, stack=()):
                     stack[0] += '='
                 else:
                     stack.push('=')
-            print('DEBUG|3')
             index += 4
         elif count == 4:
             binary = code[index:index+2]
@@ -165,7 +161,6 @@ def run(code, stack=()):
                 stack.push(bool(stack[0]) ^ bool(stack[1]))
             elif num == 3:
                 stack.push(not stack[0])
-            print('DEBUG|4')
             index += 2
         elif count == 5:
             binary = code[index:index+4]
@@ -176,7 +171,6 @@ def run(code, stack=()):
                 stack[0] += char
             else:
                 stack.push(char)
-            print('DEBUG|5')
             index += 4
         elif count == 6:
             binary = code[index:index+7]
@@ -186,7 +180,6 @@ def run(code, stack=()):
                 stack[0] += char
             else:
                 stack.push(char)
-            print('DEBUG|6')
             index += 7
         elif count == 7:
             binary = code[index]
@@ -195,7 +188,6 @@ def run(code, stack=()):
                 stack.push(chr(stack[0]))
             else:
                 stack.push(ord(stack[0]))
-            print('DEBUG|7')
             index += 1
     return stack
 
