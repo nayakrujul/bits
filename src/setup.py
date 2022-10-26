@@ -4,13 +4,13 @@ long_description = 'A very annoying language - read the docs at https://www.gith
 
 setup(
   name = 'bits-lang',
-  version = '1.5',
+  version = '1.6',
   license='Apache',
   description = 'A very annoying language',
   author = 'Rujul Nayak',
   author_email = 'rujulnayak@outlook.com',
   url = 'https://github.com/nayakrujul/bits',
-  download_url = 'https://github.com/nayakrujul/bits/archive/refs/tags/v10.tar.gz',
+  download_url = 'https://github.com/nayakrujul/bits/archive/refs/tags/v16.tar.gz',
   keywords = ['golfing', 'code-golf', 'language'],
   install_requires=[
       ],
