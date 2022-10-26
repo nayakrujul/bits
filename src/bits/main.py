@@ -192,7 +192,7 @@ def run(code, stack=()):
     return stack
 
 def from_cmdline():
-    code = input()
+    code = input().replace(' ', '')
     out = run(code)[0]
     print('Output:', out)
     print('Length of code:', len(code), 'bits =', round(len(code) / 8, 3), 'bytes')
