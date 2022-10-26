@@ -188,6 +188,7 @@ def run(code, stack=()):
                 stack.push(chr(stack[0]))
             else:
                 stack.push(ord(stack[0]))
+            index += 1
     return stack
 
 def from_cmdline():
