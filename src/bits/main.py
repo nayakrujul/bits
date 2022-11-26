@@ -1,11 +1,12 @@
 from string import ascii_lowercase, ascii_uppercase
 from bits.List import List
 
-def run(code, stack=()):
+def run(code, stack=(), vars=(0, 0, 0, 0)):
     if code.count('0') + code.count('1') != len(code):
         raise SyntaxError(
             'Code does not consist of just 0s and 1s')
     stack = List(stack)
+    vars = list(vars)
     index = 0
     while index < len(code):
         count = 0
@@ -117,20 +118,20 @@ def run(code, stack=()):
                 for item in stack:
                     if isinstance(item, str):
                         for i in item:
-                            stack = run(code[index+4:code.index('11100011')], [i] + stack)
+                            stack = run(code[index+4:code.index('11100011')], [i] + stack, vars)
                         break
                 index = code.index('11100011') + 4
             elif num == 4:
                 while True:
-                    stack = run(code[index+4:], stack)
+                    stack = run(code[index+4:], stack, vars)
             elif num == 5:
                 return stack
             elif num == 6:
                 if stack[0]:
-                    stack = run(code[index+4:code.index('11100111')], stack)
+                    stack = run(code[index+4:code.index('11100111')], stack, vars)
                     index = code.index('11101000') + 4
                 else:
-                    stack = run(code[code.index('11100111')+8:code.index('11101000')])
+                    stack = run(code[code.index('11100111')+8:code.index('11101000')], vars)
                     index = code.index('11101000') + 4
             elif num == 9:
                 stack.push(stack[0] > stack[1])
@@ -189,6 +190,14 @@ def run(code, stack=()):
             else:
                 stack.push(ord(stack[0]))
             index += 1
+        elif count == 8:
+            binary = code[index:index+3]
+            num = int(binary, 2)
+            if num <= 3:
+                vars[num] = stack[0]
+            else:
+                stack.push(vars[num-4])
+            index += 3
     return stack
 
 def from_cmdline():
