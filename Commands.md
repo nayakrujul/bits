@@ -138,3 +138,18 @@ The following commands are functions
 
 * 111111100 = chr
 * 111111101 = ord
+
+## Variables
+
+#### Starting with `111111110`
+
+Bits has 4 variables: A, B, C, D. You can get and set them.
+
+* 111111110000 = set A
+* 111111110001 = set B
+* 111111110010 = set C
+* 111111110011 = set D
+* 111111110100 = get A
+* 111111110101 = get B
+* 111111110110 = get C
+* 111111110111 = get D
